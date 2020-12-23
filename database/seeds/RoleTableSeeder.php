@@ -24,8 +24,8 @@ class RoleTableSeeder extends Seeder
         ]);
 
         Role::create([
-            'name' => 'guest',
-            'description' => 'Invitado'
+            'name' => 'error',
+            'description' => 'Error'
         ]);
     }
 }

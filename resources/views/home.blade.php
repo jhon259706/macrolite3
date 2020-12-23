@@ -9,14 +9,21 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+            @if(Auth()->user()->hasRole('admin'))
+            <div class="row mt-2">
+                <div class="col-12 text-right">
+                    <button type="button" class="btn btn-warning"> {{ __('Configure') }}</button>
+                </div>
+            </div>
+            @endif
         </div>
     </div>
 </div>
